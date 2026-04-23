@@ -1,0 +1,15 @@
+# Uploaded files — images only, never execute anything.
+
+Options -Indexes -ExecCGI
+
+<FilesMatch "\.(php|phtml|phar|pl|py|jsp|asp|cgi|sh)$">
+    Require all denied
+</FilesMatch>
+
+<FilesMatch "\.(jpg|jpeg|png|webp|gif|svg)$">
+    Require all granted
+</FilesMatch>
+
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+</IfModule>

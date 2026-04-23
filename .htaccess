@@ -1,0 +1,22 @@
+# Root-level .htaccess.
+#
+# The application's web root is /public. This file transparently forwards any
+# request that lands at the project root into /public so the user can point
+# Apache at the project folder itself (common with shared hosting) and still
+# have clean URLs.
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteRule ^public/ - [L,NC]
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    RewriteRule ^(.*)$ public/$1 [L,QSA]
+</IfModule>
+
+# Deny access to sensitive files at the project root.
+<FilesMatch "^(\.env|\.gitignore|composer\.json|composer\.lock|Dockerfile|docker-compose\.yml|README\.md|bootstrap\.php|router\.php)$">
+    Require all denied
+</FilesMatch>

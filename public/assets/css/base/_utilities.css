@@ -1,0 +1,51 @@
+/* ------------------------------------------------------------
+   Utilities — small helpers. Kept narrow on purpose.
+   ------------------------------------------------------------ */
+
+.sr-only {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0 0 0 0);
+    white-space: nowrap; border: 0;
+}
+
+.text-muted    { color: var(--color-text-muted); }
+.text-soft     { color: var(--color-text-soft); }
+.text-center   { text-align: center; }
+.text-end      { text-align: right; }
+
+.flex          { display: flex; }
+.flex-col      { flex-direction: column; }
+.items-center  { align-items: center; }
+.justify-between { justify-content: space-between; }
+.gap-1 { gap: var(--space-1); }
+.gap-2 { gap: var(--space-2); }
+.gap-3 { gap: var(--space-3); }
+.gap-4 { gap: var(--space-4); }
+.gap-6 { gap: var(--space-6); }
+
+.hidden        { display: none !important; }
+.block         { display: block; }
+.inline-block  { display: inline-block; }
+
+.full          { width: 100%; }
+.mt-0 { margin-top: 0 !important; }
+.mt-2 { margin-top: var(--space-2); }
+.mt-4 { margin-top: var(--space-4); }
+.mt-6 { margin-top: var(--space-6); }
+.mt-8 { margin-top: var(--space-8); }
+.mb-0 { margin-bottom: 0 !important; }
+.mb-2 { margin-bottom: var(--space-2); }
+.mb-4 { margin-bottom: var(--space-4); }
+.mb-6 { margin-bottom: var(--space-6); }
+.mb-8 { margin-bottom: var(--space-8); }
+
+.rounded-sm  { border-radius: var(--radius-sm); }
+.rounded-md  { border-radius: var(--radius-md); }
+.rounded-lg  { border-radius: var(--radius-lg); }
+.rounded-full{ border-radius: var(--radius-full); }
+
+@media (max-width: 700px) {
+    .md-hide { display: none !important; }
+}

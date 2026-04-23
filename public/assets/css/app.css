@@ -1,0 +1,38 @@
+/* ============================================================
+   NEOIBNQAYYIM Blog — App stylesheet
+   ------------------------------------------------------------
+   Single entry point that @imports the full design system.
+   Layer order matters: tokens → base → layout → components → pages
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+/* Base */
+@import url('base/_tokens.css');
+@import url('base/_reset.css');
+@import url('base/_typography.css');
+@import url('base/_utilities.css');
+
+/* Layout */
+@import url('layout/_container.css');
+@import url('layout/_navbar.css');
+@import url('layout/_footer.css');
+@import url('layout/_dashboard.css');
+
+/* Components */
+@import url('components/_buttons.css');
+@import url('components/_forms.css');
+@import url('components/_alerts.css');
+@import url('components/_badges.css');
+@import url('components/_avatars.css');
+@import url('components/_cards.css');
+@import url('components/_tables.css');
+@import url('components/_modal.css');
+
+/* Pages */
+@import url('pages/_home.css');
+@import url('pages/_blog.css');
+@import url('pages/_post.css');
+@import url('pages/_auth.css');
+@import url('pages/_info.css');
+@import url('pages/_admin.css');

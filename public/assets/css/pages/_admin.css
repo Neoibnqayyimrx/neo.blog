@@ -1,0 +1,103 @@
+/* ------------------------------------------------------------
+   Admin pages — dashboard + CRUD
+   ------------------------------------------------------------ */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: var(--space-5);
+    margin-bottom: var(--space-8);
+}
+
+.admin-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: var(--space-6);
+    margin-bottom: var(--space-8);
+}
+@media (max-width: 1100px) {
+    .admin-grid { grid-template-columns: 1fr; }
+}
+
+.admin-page-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+    flex-wrap: wrap;
+}
+.admin-page-head h1,
+.admin-page-head h2 {
+    font-family: var(--font-sans);
+    font-size: var(--fs-2xl);
+    margin: 0;
+}
+.admin-page-head__sub {
+    color: var(--color-text-muted);
+    font-size: var(--fs-sm);
+    margin-top: 4px;
+}
+
+/* Form-heavy admin pages */
+.admin-form-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-xs);
+}
+.admin-form-card__body {
+    padding: var(--space-7) var(--space-7) var(--space-5);
+}
+.admin-form-card__footer {
+    padding: var(--space-4) var(--space-7);
+    border-top: 1px solid var(--color-border);
+    background: var(--color-neutral-50);
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+    .admin-form-card__body,
+    .admin-form-card__footer {
+        padding: var(--space-5);
+    }
+}
+
+/* Inline add-row form used on Categories */
+.inline-form {
+    display: flex;
+    gap: var(--space-2);
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.inline-form .form-input { flex: 1 1 12rem; min-width: 0; }
+
+/* Category color dot */
+.color-dot {
+    width: 10px; height: 10px;
+    border-radius: var(--radius-full);
+    background: var(--color-primary);
+    display: inline-block;
+    margin-right: var(--space-2);
+    vertical-align: middle;
+}
+
+/* User-row avatar + name cluster */
+.user-cell {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+.user-cell__meta { line-height: 1.2; }
+.user-cell__name {
+    font-weight: var(--fw-semibold);
+    color: var(--color-heading);
+}
+.user-cell__handle {
+    font-size: var(--fs-xs);
+    color: var(--color-text-muted);
+}

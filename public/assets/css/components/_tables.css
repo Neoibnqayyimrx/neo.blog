@@ -1,0 +1,111 @@
+/* ------------------------------------------------------------
+   Tables
+   ------------------------------------------------------------ */
+
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: var(--radius-md);
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: var(--fs-sm);
+    color: var(--color-neutral-700);
+}
+
+.table th,
+.table td {
+    padding: var(--space-4) var(--space-5);
+    text-align: left;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.table th {
+    font-weight: var(--fw-semibold);
+    color: var(--color-text-muted);
+    background: var(--color-neutral-50);
+    text-transform: uppercase;
+    font-size: var(--fs-xs);
+    letter-spacing: 0.04em;
+}
+
+.table tbody tr {
+    transition: background var(--transition);
+}
+.table tbody tr:hover {
+    background: var(--color-neutral-50);
+}
+.table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.table__id {
+    font-variant-numeric: tabular-nums;
+    color: var(--color-text-muted);
+    font-weight: var(--fw-medium);
+}
+.table__title {
+    color: var(--color-heading);
+    font-weight: var(--fw-semibold);
+}
+.table__muted {
+    color: var(--color-text-muted);
+}
+
+.table__thumb {
+    width: 56px; height: 40px;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    background: var(--color-neutral-100);
+}
+.table__thumb img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+}
+
+.table__actions {
+    display: flex;
+    gap: var(--space-2);
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+}
+.table__action {
+    width: 34px; height: 34px;
+    border-radius: var(--radius-sm);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-neutral-500);
+    background: var(--color-neutral-100);
+    transition: background var(--transition), color var(--transition);
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+.table__action:hover {
+    color: var(--color-heading);
+    background: var(--color-neutral-200);
+}
+.table__action--edit:hover { color: var(--color-primary); background: var(--color-primary-100); }
+.table__action--danger:hover { color: var(--color-danger); background: var(--color-danger-100); }
+.table__action.is-disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.table__actions form {
+    margin: 0;
+    display: inline;
+}
+
+.table__empty {
+    padding: var(--space-10) var(--space-6) !important;
+    text-align: center;
+    color: var(--color-text-muted);
+}

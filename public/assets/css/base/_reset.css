@@ -1,0 +1,63 @@
+/* ------------------------------------------------------------
+   Minimal modern reset
+   ------------------------------------------------------------ */
+
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; }
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-sans);
+    font-size: var(--fs-base);
+    line-height: var(--lh-base);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+}
+
+img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--color-link);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+a:hover { color: var(--color-link-hover); }
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+    color: inherit;
+}
+
+button { cursor: pointer; border: 0; background: none; }
+
+ul, ol { list-style: none; }
+
+table { border-collapse: collapse; width: 100%; }
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--color-border);
+    margin: var(--space-6) 0;
+}
+
+:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+}

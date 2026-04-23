@@ -1,0 +1,12 @@
+/.env
+/storage/logs/*
+!/storage/logs/.gitkeep
+/storage/database.sqlite
+/storage/uploads/*
+!/storage/uploads/.gitkeep
+/public/uploads/*
+!/public/uploads/.htaccess
+!/public/uploads/default-avatar.png
+!/public/uploads/default-thumbnail.png
+.DS_Store
+Thumbs.db
