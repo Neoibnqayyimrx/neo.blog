@@ -1,6 +1,10 @@
 -- MySQL schema + seed data for NEO · BLOG
 -- Load with:  mysql -u root -p php_blog < database/schema.mysql.sql
 
+-- This file is UTF-8. Without SET NAMES, a client that defaults to latin1
+-- (such as the MySQL image's first-start loader) stores "·" as "Â·".
+SET NAMES utf8mb4;
+
 SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS posts;
 DROP TABLE IF EXISTS categories;
